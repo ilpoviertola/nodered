@@ -1,2 +1,2 @@
 # nodered
-My Node-RED practice
+Git repository for Node-RED project
