@@ -9,3 +9,6 @@ Voi myös syöttää manuaalisesti arvoja, nämäkin päivittyy DB:seen. Arvo 0 
 
 Mitään historia-lokia ei ole tähän (ainakaan vielä) toteutettu.
 
+21.4: Uusi formaatti MongoDB:seen tehonsäädön vuoksi. Jos MongoDB on jo alustettu, niin uuden fieldin saa lisättyä mongon komentorivioperaatiolla: 
+    > db.lights.update({"_id":1},{$set:{"defaultPower" : 30}}). Pitää vain toistaa joka _id:lle.
+
