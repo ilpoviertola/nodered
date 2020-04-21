@@ -222,21 +222,6 @@ var app1 = new Vue({
     		sendMessage('valot'+room.toString(), message)
     	}
 
-    	// air conditioning: rooms 1-5
-    	document.getElementById("ilmanvaihto1").onclick = function() {airConditioning(1)};
-    	document.getElementById("ilmanvaihto2").onclick = function() {airConditioning(2)};
-    	document.getElementById("ilmanvaihto3").onclick = function() {airConditioning(3)};
-    	document.getElementById("ilmanvaihto4").onclick = function() {airConditioning(4)};
-    	document.getElementById("ilmanvaihto5").onclick = function() {airConditioning(5)};
-
-    	// function to send a message on a 'airConditioning' event
-    	// function gets the room number as a parameter
-    	function airConditioning(room) {
-    		var message = "not implemented" // TODO: specify message here
-    		// Room number is included in the topic of the message
-    		sendMessage('ilmanvaihto'+room.toString(), message)
-    	}
-
     	// doors: doors 1-3
     	document.getElementById("ovi1").onclick = function() {door(1)};
     	document.getElementById("ovi2").onclick = function() {door(2)};
