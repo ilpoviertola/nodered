@@ -1,6 +1,6 @@
-{ "_id" : 1, "isItOn" : false, "power" : 0, "roomNumber" : 1 }
-{ "_id" : 2, "isItOn" : false, "power" : 0, "roomNumber" : 2 }
-{ "_id" : 3, "isItOn" : false, "power" : 0, "roomNumber" : 3 }
-{ "_id" : 4, "isItOn" : false, "power" : 0, "roomNumber" : 4 }
-{ "_id" : 5, "isItOn" : false, "power" : 0, "roomNumber" : 5 }
+{ "_id" : 1, "isItOn" : false, "power" : 5, "roomNumber" : 1, "defaultPower" : 30 }
+{ "_id" : 2, "isItOn" : false, "power" : 5, "roomNumber" : 2, "defaultPower" : 30 }
+{ "_id" : 3, "isItOn" : false, "power" : 5, "roomNumber" : 3, "defaultPower" : 30 }
+{ "_id" : 4, "isItOn" : false, "power" : 5, "roomNumber" : 4, "defaultPower" : 30 }
+{ "_id" : 5, "isItOn" : false, "power" : 5, "roomNumber" : 5, "defaultPower" : 30 }
 
