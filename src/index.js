@@ -190,7 +190,7 @@ var app1 = new Vue({
 	    // !!!!
 	    // ASE-2610 Simulator functionality STARTS HERE
 	    // !!!!
-        
+
         // If msg changes - msg is updated when a standard msg is received from Node-RED over Socket.IO
         // newVal relates to the attribute being listened to.
         uibuilder.onChange('msg', function(newVal){
@@ -200,20 +200,20 @@ var app1 = new Vue({
             sendMessage('timestamp current', d)
             vueApp.msgRecvd = newVal
         })
-        
+
     	// Manually send a message to Node-RED flow
     	function sendMessage(element, message) {
     		console.info('sending message from' + element)
     		uibuilder.send( { 'topic':element, 'payload':message } )
         }
-    	
+
     	// lights: rooms 1-5
     	document.getElementById("valot1").onclick = function() {lights(1)};
     	document.getElementById("valot2").onclick = function() {lights(2)};
     	document.getElementById("valot3").onclick = function() {lights(3)};
     	document.getElementById("valot4").onclick = function() {lights(4)};
     	document.getElementById("valot5").onclick = function() {lights(5)};
-    	
+
     	// Function to send a message on a 'lights' event
         // function gets the room number as a parameter
     	function lights(room) {
@@ -221,14 +221,14 @@ var app1 = new Vue({
     		// Room number is included in the topic of the message
     		sendMessage('valot'+room.toString(), message)
     	}
-    	
+
     	// air conditioning: rooms 1-5
     	document.getElementById("ilmanvaihto1").onclick = function() {airConditioning(1)};
     	document.getElementById("ilmanvaihto2").onclick = function() {airConditioning(2)};
     	document.getElementById("ilmanvaihto3").onclick = function() {airConditioning(3)};
     	document.getElementById("ilmanvaihto4").onclick = function() {airConditioning(4)};
     	document.getElementById("ilmanvaihto5").onclick = function() {airConditioning(5)};
-    	
+
     	// function to send a message on a 'airConditioning' event
     	// function gets the room number as a parameter
     	function airConditioning(room) {
@@ -236,12 +236,12 @@ var app1 = new Vue({
     		// Room number is included in the topic of the message
     		sendMessage('ilmanvaihto'+room.toString(), message)
     	}
-    	
+
     	// doors: doors 1-3
     	document.getElementById("ovi1").onclick = function() {door(1)};
     	document.getElementById("ovi2").onclick = function() {door(2)};
     	document.getElementById("ovi3").onclick = function() {door(3)};
-    	
+
     	// Function to send a message on a 'door' event
     	// function gets the door number as a parameter
     	function door(number) {
@@ -249,19 +249,27 @@ var app1 = new Vue({
     		// Room number is included in the topic of the message
     		sendMessage('ovi'+number.toString(), message)
     	}
-    	
-    	var outTemp = document.getElementById("outTemp")
-    	var inTemp = document.getElementById("inTemp")
-    		
-    	outTemp.onmouseup = function() {
-    		var message = this.value // TODO: specify message here
-    		sendMessage('outTemp', message)
-    	}
-    		
-    	inTemp.onmouseup = function() {
-    		var message = this.value // TODO: specify message here
-    		sendMessage('inTemp', message)
-    	}
+
+    	// var outTemp = document.getElementById("outTemp")
+    	// var inTemp = document.getElementById("inTemp")
+        //
+    	// outTemp.onmouseup = function() {
+    	// 	var message = this.value // TODO: specify message here
+    	// 	sendMessage('outTemp', message)
+    	// }
+        //
+    	// inTemp.onmouseup = function() {
+    	// 	var message = this.value // TODO: specify message here
+    	// 	sendMessage('inTemp', message)
+    	// }
+        for (var i = 1; i <=5; i++) {
+            var airQuality = document.getElementById("airQuality"+i.toString());
+            const room = i;
+            airQuality.onmouseup = function() {
+        		var message = this.value; // TODO: specify message here
+        		sendMessage('airQuality'+room.toString(), message);
+        	}
+        }
 
 
 

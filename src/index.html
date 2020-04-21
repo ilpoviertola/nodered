@@ -53,51 +53,71 @@
 </head>
 <body>
     <!-- Muokkaa vain tätä osiota -->
-	
+
 	<div id="container">
 		<div class="room">
 			<p class="roomtext">Huone 1</p>
 			<input type="button" id ="valot1" value="Valot 1">
 			<input class="iv" type="button" id ="ilmanvaihto1" value="Ilmanvaihto 1">
 			<input type="button" id ="ovi2" value="Ovi 2">
+            <div class="slidecontainer">
+    			<p>Air Quality</p>
+      			<input type="range" min="0" max="100" value="30" class="slider" id="airQuality1">
+    		</div>
 		</div>
 		<div class="room">
 			<p class="roomtext">Huone 2</p>
 			<input type="button" id ="valot2" value="Valot 2">
 			<input class="iv" type="button" id ="ilmanvaihto2" value="Ilmanvaihto 2">
+            <div class="slidecontainer">
+    			<p>Air Quality</p>
+      			<input type="range" min="0" max="100" value="30" class="slider" id="airQuality2">
+    		</div>
 		</div>
 	    <div class="room">
 			<p class="roomtext">Huone 3</p>
 			<input type="button" id ="valot3" value="Valot 3">
 			<input class="iv" type="button" id ="ilmanvaihto3" value="Ilmanvaihto 3">
+            <div class="slidecontainer">
+    			<p>Air Quality</p>
+      			<input type="range" min="0" max="100" value="30" class="slider" id="airQuality3">
+    		</div>
 		</div>
 		<div class="room">
 			<p class="roomtext">Huone 4</p>
 			<input type="button" id ="valot4" value="Valot 4">
 			<input class="iv" type="button" id ="ilmanvaihto4" value="Ilmanvaihto 4">
 			<input type="button" id ="ovi3" value="Ovi 3">
+            <div class="slidecontainer">
+    			<p>Air Quality</p>
+      			<input type="range" min="0" max="100" value="30" class="slider" id="airQuality4">
+    		</div>
 		</div>
-	
-	
+
+
 	<div class="hallway">
 		<p class="roomtext">Käytävä</p>
 		<input type="button" id ="valot5" value="Valot Käytävä">
 		<input class="iv" type="button" id ="ilmanvaihto5" value="Ilmanvaihto Käytävä">
 		<input type="button" id ="ovi1" value="Ovi 1">
-		
-		<div class="slidecontainer">
+
+		<!--<div class="slidecontainer">
 			<p>Inside Temperature</p>
   			<input type="range" min="0" max="30" value="18" class="slider" id="inTemp">
+        </div>-->
+        <div class="slidecontainer">
+			<p>Air Quality</p>
+  			<input type="range" min="0" max="100" value="30" class="slider" id="airQuality5">
 		</div>
 	</div>
-	
-	
+
+
 	<!-- The "app" element is where the code for dynamic updates is attached -->
-	<div class="slidecontainer">
+	<!--<div class="slidecontainer">
 		<p>Outside Temperature</p>
   		<input type="range" min="-30" max="40" value="20" class="slider" id="outTemp">
 	</div>
-	</div>
+    </div>-->
 	<!-- Muokkaa vain tähän asti -->
 
     <!-- These MUST be in the right order. Note no leading / -->
